@@ -1,0 +1,113 @@
+:root{
+    --primary-text-color:#000;
+    --secondary-text-color:#fff;
+    --primary-bg-color:#fff;
+    --secondary-bg-color:orange;
+}
+    *{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    outline: none;
+}
+body {
+    padding:3.75rem 4rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: start;
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+/* body{
+    background-image: url("./imgs/);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: FlipH;
+} */
+header h1 {
+    font-size: 2rem;
+    font-family: "Bebas Neue";
+    color: var(--primary-text-color);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap:1.125rem;
+    width: 45%;
+}
+main h1 {
+    font-family: "Bebas Neue";
+    font-size:5rem;
+    color: var(--secondary-text-color);
+}
+main p {
+    font-family: "Exo";
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.6em;
+    font-size: 1rem;
+    color:var(--secondary-text-color);
+}
+form {    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    grid:
+    "A A A"
+    "B B C";
+    gap: 1rem;
+    padding: 2rem 0;
+}
+form input[type="text"],
+form input[type="email"]{
+    background-color:var(--primary-bg-color);
+    font-family: "Exo";
+    font-weight: 400;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+form input[type="text"]  {grid-area: A;}
+form input[type="email"] {grid-area: B;}
+form input[type="submit"]{
+    grid-area: C;
+    background-color:var(--secondary-bg-color);
+    font-family: "Exo";
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: .75rem;
+}
+.socials img {
+    display: block;
+    height: 1.75rem;
+    width: 1.75rem;
+    /* filter: invert(); */
+}
+footer p{
+    font-family: "Oswald";
+    font-weight: 200;
+    font-size:1rem;
+    color:var(--secondary-text-color)
+}
